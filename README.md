@@ -20,19 +20,13 @@ Developer/Contributors (UnOfficial Patch):
 - Unofficial Translation:
   - Korean: MuteJack
 
-## Important Notice for Korean Translation!! (2026.02.01)
-
-현재 git사용 미숙으로 인해 한국어 번역에 심각한 오류가 생긴 상황입니다.
-현재 예전 파일들과 재검토를 통해서 긴급 수정중이니 한국어 번역에 대해서는 며칠만 있다가 다시 플레이하시는 것을 권장드립니다.
-
 ## Information / 정보
 
 - Version Info / 버전 정보:
 
   - 게임 이름: Mycopsychosys Remastered
   - 게임 버전: Mycopsychosys v2.0
-  - 업데이트 날짜: 1.0 (2026.01.06)
-  - 패치 버전: 1.0 (2026.01.31)
+  - 패치 버전: 1.0.1 (2026.02.01 HotFix)
 - Environment / 지원 환경:
 
   - O/S: Windows 10 or Later

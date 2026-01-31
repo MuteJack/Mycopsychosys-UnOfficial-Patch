@@ -11,7 +11,7 @@ Mycopsychosys Remastered의 비공식 기능/한국어 번역 패치입니다.
 
 - 게임 이름: Mycopsychosys Remastered
 - 게임 버전: Mycopsychosys v2.0 (2026.01.06 업데이트)
-- 패치 버전: 1.0 (2026.01.31)
+- 패치 버전: 1.0.1 (2026.02.01 HotFix)
 
 ### 0.2. 지원
 
@@ -124,7 +124,6 @@ Patcher/
 원본 게임: [DeltaCatStudio](https://www.deltacatstudio.com/)
 
 - [Mycopsychosys Remastered (Steam)](https://store.steampowered.com/app/3807550/Mycopsychosys_Remastered/)
-
 - [Mycopsychosys Remastered (itch.io)](https://delta-cat-studio.itch.io/mycopsychosys)
 
 비공식 패치 제작자: MuteJack
