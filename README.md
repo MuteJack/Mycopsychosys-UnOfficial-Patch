@@ -4,17 +4,13 @@
 
 Unofficial feature & translation patch for Game 'Mycopsychosys Remastered'.
 
-
-
 자세한 내용은 아래의 README Files 섹션의 언어별 README 파일을 참고해주세요. (README_kor.md)
 
 For further instructions, please check 'README_eng.md' that linked below.
 
-
-
 Original Game: [DeltaCatStudio](https://www.deltacatstudio.com/)
 
-- [Mycopsychosys Remastered (Steam)](https://store.steampowered.com/app/2582030/Mycopsychosys_Remastered/)
+- [Mycopsychosys Remastered (Steam)](https://store.steampowered.com/app/3807550/Mycopsychosys_Remastered/)
 - [Mycopsychosys Remastered (itch.io)](https://delta-cat-studio.itch.io/mycopsychosys)
 
 Developer/Contributors (UnOfficial Patch):
@@ -23,6 +19,11 @@ Developer/Contributors (UnOfficial Patch):
   - MuteJack
 - Unofficial Translation:
   - Korean: MuteJack
+
+## Important Notice for Korean Translation!! (2026.02.01)
+
+현재 git사용 미숙으로 인해 한국어 번역에 심각한 오류가 생긴 상황입니다.
+현재 예전 파일들과 재검토를 통해서 긴급 수정중이니 한국어 번역에 대해서는 며칠만 있다가 다시 플레이하시는 것을 권장드립니다.
 
 ## Information / 정보
 

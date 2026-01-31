@@ -123,7 +123,7 @@ Patcher/
 
 Original Game: [DeltaCatStudio](https://www.deltacatstudio.com/)
 
-- [Mycopsychosys Remastered (Steam)](https://store.steampowered.com/app/2582030/Mycopsychosys_Remastered/)
+- [Mycopsychosys Remastered (Steam)](https://store.steampowered.com/app/3807550/Mycopsychosys_Remastered/)
 - [Mycopsychosys Remastered (itch.io)](https://delta-cat-studio.itch.io/mycopsychosys)
 
 Unofficial Patch Creator: MuteJack

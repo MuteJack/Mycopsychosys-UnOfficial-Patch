@@ -123,7 +123,8 @@ Patcher/
 
 원본 게임: [DeltaCatStudio](https://www.deltacatstudio.com/)
 
-- [Mycopsychosys Remastered (Steam)](https://store.steampowered.com/app/2582030/Mycopsychosys_Remastered/)
+- [Mycopsychosys Remastered (Steam)](https://store.steampowered.com/app/3807550/Mycopsychosys_Remastered/)
+
 - [Mycopsychosys Remastered (itch.io)](https://delta-cat-studio.itch.io/mycopsychosys)
 
 비공식 패치 제작자: MuteJack
