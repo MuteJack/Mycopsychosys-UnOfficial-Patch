@@ -1,19 +1,21 @@
 # Mycopsychosys Remastered - 비공식 기능/한국어 번역 패치
 
-NOTE: If you want to read this as another language, check README_{lang}.md. (ex: README_eng.md)
+> NOTE: If you want to read this as English, check [README_eng.md](README_eng.md)
 
-Mycopsychosys Remastered의 비공식 기능/한국어 번역 패치입니다.
+Mycopsychosys Remastered의 비공식 기능/한국어 번역 추가 패치입니다.
 게임이 업데이트될 시, 적용이 불가할 수 있습니다.
+
+---
 
 ## 0. Informations
 
-### 0.1. Version Info
+### 0.1. 버전 정보
 
 - 게임 이름: Mycopsychosys Remastered
 - 게임 버전: Mycopsychosys v2.0 (2026.01.06 업데이트)
-- 패치 버전: 1.0.1 (2026.02.01 HotFix)
+- 패치 버전: 1.0.2 (2026.02.02)
 
-### 0.2. 지원
+### 0.2. 지원 환경 (자동 패치기)
 
 - O/S: Windows 10 or Later
 - Game Platform: Steam (Itch.io에서 구매/다운로드 가능한 게임에 대해서는 테스트되지 않았습니다.)
@@ -24,30 +26,42 @@ Mycopsychosys Remastered의 비공식 기능/한국어 번역 패치입니다.
 2. Patcher 폴더를 게임 폴더 내에 복사합니다.
    1. 기본 경로: `C:\Program Files (x86)\Steam\steamapps\common\Mycopsychosys Remastered\`
    2. 기타 경로: `{드라이브 문자}:\SteamLibrary\steamapps\common\Mycopsychosys Remastered\`
-3. git 홈페이지에서 Git for Windows/x64 Portable을 다운로드 받고, Patcher폴더 내의 GitPortable 폴더에 복사합니다.
-   다운로드:  `https://git-scm.com/install/windows`
+3. [git 홈페이지](https://git-scm.com/install/windows)에서 Git for Windows/x64 Portable을 다운로드 받고, Patcher폴더 내의 `\PortableGit` 폴더에 복사합니다.
+   다운로드 링크:  `https://git-scm.com/install/windows`
 4. Patcher폴더의 apply_patch.bat을 실행합니다.
 5. 게임 실행 후 추가된 언어/기능을 확인합니다.
+
+---
 
 ## 2. 변경 사항
 
 ### 2.1. 비공식 번역 추가
 
-#### 2.1.1 한국어 번역
+#### 2.1.1 환경설정 > 언어에 한국어 옵션 추가
+
+- 다른 언어(번역)를 덮어쓰지 않고 새로운 옵션을 추가하는 방식입니다.
+- 따라서 한국어 번역 추가가 다른 언어에 영향을 미치지 않습니다.
+
+<table>
+  <tr>
+    <td><img src="README/Title_Korean_Flag.png" width="500"></td>
+    <td><img src="README/Preference_Korean.png" width="500"></td>
+  </tr>
+</table>
+
+#### 2.1.2 한국어 번역 (스크립트)
 
 - 전체 게임 텍스트 번역 (`game/tl/korean/`)
 - 캐릭터 이름 번역
 - UI/메뉴 번역
 - 한글 지원 폰트(나눔고딕) 추가
 
-<img src="README/Title_Korean.png" width="500">
+<img src="README/Intro_Page_Korean.png" width="500">
 
-#### 2.1.2 한국어 UI 버튼 이미지
+#### 2.1.3 한국어 UI 버튼 이미지
 
-- `game/images/Buttons/korean/` 에 위치
-- Basement, Bathroom, Bedroom, FrontDoor, Hallway, Kitchen, LivingRoom, Loft, Window
-- skip 버튼 (skip1, skip2)
-- 현재 영어로 된 게임 내 원본 이미지를 사용 (추후 버튼 이미지에 대한 번역 지원과, 기존 버튼에 대한 기본 언어가 english가 아닌 catalan인 이유로 추가됨)
+- 인게임: Basement, Bathroom, Bedroom, FrontDoor, Hallway, Kitchen, LivingRoom, Loft, Window
+- 게임 인트로: Skip 버튼
 
 ### ~~2.2 오프라인 웹사이트 기능 (현재 한국어 한정 - 삭제됨)~~
 
@@ -83,13 +97,13 @@ Mycopsychosys Remastered의 비공식 기능/한국어 번역 패치입니다.
 - 프랑스어/러시아어 번역자 정보 줄 분리 (언어에 밑줄이 적용되지 않는 문제)
 - 한국어 번역자(MuteJack) 정보 추가 (한국어 번역 한정, 다른 언어에 대한 패치 추가 시 비공식 번역 명시 권장)
 
-### Note
-
-위 버그 수정 사항은 게임 진행에 영향을 미치지 않는 매우 사소한 버그에 대한 비공식 Minor Fix이며, 이미 DeltaCat Studio에 제보되었습니다. 비공식 번역/패치 작업 중 우연히 발견하여 수정한 것을 해당 비공식 패치에 함께 포함한 것이며, 원본 게임의 품질을 지적하려는 의도는 없습니다.
+> **Note:** 위 버그 수정 사항은 게임 진행에 영향을 미치지 않는 매우 사소한 버그에 대한 비공식 Minor Fix이며, 해당 버그들은 이미 DeltaCat Studio에 제보되었습니다. 비공식 번역/패치 작업 중 우연히 발견하여 수정한 것을 해당 비공식 패치에 함께 포함한 것이며, 원본 게임의 품질을 지적하려는 의도는 없습니다.
 
 ### ~~2.5 추가 개발 도구 (삭제됨)~~
 
 - ~~`check_apostrophe.py`: 번역 파일의 아포스트로피 불일치 자동 검출 도구, 게임 내 아포스트로피'가 straight(')와 curly(’)가 혼용되어있음.~~
+
+---
 
 ## 3. 파일 구조
 
@@ -99,17 +113,19 @@ Patcher/
 ├── unofficial_patch.dat
 ├── PortableGit/
 |   └── PortableGit-2.52.0-64-bit.7z.exe (git 홈페이지에서 다운로드 필요)
-├── README.md
-├── README_kor.md
-├── README_eng.md
+├── README.md (README-메인)
+├── README_kor.md (README-한국어 버전)
+├── README_eng.md (README-영어 버전)
 └── README/
     └── {Image Files for README files}
 ```
 
+---
+
 ## 4. 주의사항
 
 - 해당 패치는 비공식이며, DeltaCat Studio와 관련이 없습니다.
-- 게임 "Mycopsychosys Remastered의 모든 저작권은 DeltaCat Studio에 있습니다."
+- 게임 "Mycopsychosys: Remastered"의 모든 저작권은 DeltaCat Studio에 있습니다.
 - 패치 파일에는 게임의 스크립트, 리소스 파일 원본이 포함되어 있지 않으며, 최소한의 수정 이력에 대한 데이터 파일과 이를 게임에 적용하기 위한 batch 스크립트 및 파일 구조만을 포함, 제공됩니다.
   - 개발용 레포지터리에는 게임의 원본 파일/스크립트가 다수 포함되어 있어, 저작권 보호를 위해 수정된 파일 대신 패치 파일만을 배포하는 방식을 채택하였습니다.
   - 위와 같은 이유로 개발용 레포지터리는 공개되지 않으며, 원본 레포지터리/소스코드에 대한 공개 요청(개인 연락 포함)은 받지 않습니다.
@@ -119,11 +135,13 @@ Patcher/
   - Steam 게임 특성상, game폴더를 삭제하지 않으면 수정사항은 재설치 과정에서 제거되지 않으므로 주의바랍니다.
 - 본 패치는 어떠한 보증 없이 제공되며, 패치 사용으로 인해 발생하는 오류, 데이터 손상, 기타 모든 문제에 대해 제작자는 책임지지 않습니다.
 
+---
+
 ## 5. Credits
 
-원본 게임: [DeltaCatStudio](https://www.deltacatstudio.com/)
+게임 개발: [DeltaCatStudio](https://www.deltacatstudio.com/)
 
 - [Mycopsychosys Remastered (Steam)](https://store.steampowered.com/app/3807550/Mycopsychosys_Remastered/)
 - [Mycopsychosys Remastered (itch.io)](https://delta-cat-studio.itch.io/mycopsychosys)
 
-비공식 패치 제작자: MuteJack
+비공식 패치 개발: [MuteJack](https://github.com/MuteJack/Mycopsychosys-UnOfficial-Patch)

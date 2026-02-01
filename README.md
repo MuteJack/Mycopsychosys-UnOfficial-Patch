@@ -1,12 +1,10 @@
 # Mycopsychosys Remastered - Unofficial Translation/Function Patch
 
-'Mycopsychosys Remastered' 게임의 비공식 기능 및 번역 패치입니다.
-
-Unofficial feature & translation patch for Game 'Mycopsychosys Remastered'.
-
-자세한 내용은 아래의 README Files 섹션의 언어별 README 파일을 참고해주세요. (README_kor.md)
+Unofficial feature patch for Game 'Mycopsychosys: Remastered'. (+Korean Translation)
+'Mycopsychosys: Remastered' 게임의 비공식 기능 및 한국어 번역 패치입니다.
 
 For further instructions, please check 'README_eng.md' that linked below.
+자세한 내용은 아래의 README Files 섹션의 언어별 README 파일을 참고해주세요. (README_kor.md)
 
 Original Game: [DeltaCatStudio](https://www.deltacatstudio.com/)
 
@@ -26,7 +24,7 @@ Developer/Contributors (UnOfficial Patch):
 
   - 게임 이름: Mycopsychosys Remastered
   - 게임 버전: Mycopsychosys v2.0
-  - 패치 버전: 1.0.1 (2026.02.01 HotFix)
+  - 패치 버전: 1.0.2 (2026.02.02)
 - Environment / 지원 환경:
 
   - O/S: Windows 10 or Later
