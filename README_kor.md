@@ -13,7 +13,7 @@ Mycopsychosys Remastered의 비공식 기능/한국어 번역 추가 패치입�
 
 - 게임 이름: Mycopsychosys Remastered
 - 게임 버전: Mycopsychosys v2.0 (2026.01.06)
-- 패치 버전: 1.0.2 (2026.02.02)
+- 패치 버전: 1.0.3 (2026.02.03)
 
 ### 0.2. 지원 환경 (자동 패치기)
 
