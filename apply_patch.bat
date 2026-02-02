@@ -19,36 +19,40 @@ echo ============================================
 echo  Mycopsychosys Remastered - Patch Applier
 echo ============================================
 echo.
+echo  Path: !SCRIPT_DIR!
+echo.
 
 :: Extract PortableGit if not already extracted
-if not exist "%GIT_EXE%" (
-    set "FOUND_EXE="
-    for %%F in ("%GIT_DIR%\PortableGit-*.7z.exe") do set "FOUND_EXE=%%F"
-    if not defined FOUND_EXE (
-        echo [ERROR] PortableGit folder does not contain git or a PortableGit installer.
-        pause
-        exit /b 1
-    )
-    echo [0] Extracting PortableGit...
-    "!FOUND_EXE!" -o"%GIT_DIR%" -y >nul
-    if not exist "%GIT_EXE%" (
-        echo [ERROR] Failed to extract PortableGit.
-        pause
-        exit /b 1
-    )
-    echo [0] PortableGit extracted.
-    echo.
+if exist "!GIT_EXE!" goto :skip_extract
+
+set "FOUND_EXE="
+for %%F in ("!GIT_DIR!\PortableGit-*.7z.exe") do set "FOUND_EXE=%%F"
+if not defined FOUND_EXE (
+    echo [ERROR] PortableGit folder does not contain git or a PortableGit installer.
+    pause
+    exit /b 1
 )
+echo [0] Extracting PortableGit...
+"!FOUND_EXE!" -o"!GIT_DIR!" -y
+if not exist "!GIT_EXE!" (
+    echo [ERROR] Failed to extract PortableGit.
+    pause
+    exit /b 1
+)
+echo [0] PortableGit extracted.
+echo.
+
+:skip_extract
 
 :: Check encoded patch file
-if not exist "%DAT_FILE%" (
-    echo [ERROR] %DAT_FILE% not found.
+if not exist "!DAT_FILE!" (
+    echo [ERROR] !DAT_FILE! not found.
     pause
     exit /b 1
 )
 
 :: Check game folder in parent directory
-if not exist "%GAME_ROOT%game" (
+if not exist "!GAME_ROOT!game" (
     echo [ERROR] game folder not found in parent directory.
     echo         Please place the Patcher folder inside the game's root directory.
     pause
@@ -57,9 +61,9 @@ if not exist "%GAME_ROOT%game" (
 
 :: Step 1: Decode Base64 patch
 echo [1/2] Decoding patch data...
-powershell -Command "$b64 = [System.IO.File]::ReadAllText('%DAT_FILE%'); $bytes = [Convert]::FromBase64String($b64); [System.IO.File]::WriteAllBytes('%TEMP_PATCH%', $bytes)"
+powershell -Command "$b64 = [System.IO.File]::ReadAllText('!DAT_FILE!'); $bytes = [Convert]::FromBase64String($b64); [System.IO.File]::WriteAllBytes('!TEMP_PATCH!', $bytes)"
 
-if not exist "%TEMP_PATCH%" (
+if not exist "!TEMP_PATCH!" (
     echo [ERROR] Failed to decode patch data.
     pause
     exit /b 1
@@ -67,12 +71,12 @@ if not exist "%TEMP_PATCH%" (
 
 :: Step 2: Apply patch from game root
 echo [2/2] Applying patch...
-cd /d "%GAME_ROOT%"
-"%GIT_EXE%" apply -p1 "%TEMP_PATCH%"
+cd /d "!GAME_ROOT!"
+"!GIT_EXE!" apply -p1 "!TEMP_PATCH!"
 set "APPLY_EXIT=!errorlevel!"
 
 :: Cleanup temp file
-del "%TEMP_PATCH%" 2>nul
+del "!TEMP_PATCH!" 2>nul
 
 if "!APPLY_EXIT!" neq "0" (
     echo.
