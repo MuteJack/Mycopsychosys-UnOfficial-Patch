@@ -24,7 +24,7 @@ Developer/Contributors (UnOfficial Patch):
 
   - 게임 이름: Mycopsychosys Remastered
   - 게임 버전: Mycopsychosys v2.0
-  - 패치 버전: 1.0.3 (2026.02.03)
+  - 패치 버전: 1.0.4 (2026.02.04)
 - Environment / 지원 환경:
 
   - O/S: Windows 10 or Later

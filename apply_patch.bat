@@ -12,7 +12,7 @@ set "GAME_ROOT=%SCRIPT_DIR%..\\"
 
 set "GIT_DIR=%SCRIPT_DIR%PortableGit"
 set "GIT_EXE=%GIT_DIR%\cmd\git.exe"
-set "DAT_FILE=%SCRIPT_DIR%unofficial_patch_20260203.dat"
+set "DAT_FILE=%SCRIPT_DIR%unofficial_patch_20260204.dat"
 set "TEMP_PATCH=%TEMP%\~unofficial_patch.tmp"
 
 echo ============================================
