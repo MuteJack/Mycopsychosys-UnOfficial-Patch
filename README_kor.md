@@ -22,8 +22,8 @@ Mycopsychosys Remastered의 비공식 기능/한국어 번역 추가 패치입�
 
 ---
 
-## 1. 설치 방법
-
+## 1. 설치 방법 [Youtube](https://youtu.be/kpcGYGjHx_Q?si=de8jJ_3fQnm25dER)
+영상: https://youtu.be/kpcGYGjHx_Q?si=de8jJ_3fQnm25dER
 1. Steam에서 Mycopsychosys Remastered를 구매, 설치합니다.
 2. Patcher 폴더를 게임 폴더 내에 복사합니다.
    1. 기본 경로: `C:\Program Files (x86)\Steam\steamapps\common\Mycopsychosys Remastered\`
