@@ -14,7 +14,7 @@ Note that this patch may not work if the game is updated.
 
 - Game: Mycopsychosys Remastered
 - Game Version: Mycopsychosys v2.0 (2026.01.06)
-- Patch Version: 1.0.4(2026.02.04)
+- Patch Version: 1.0.5 (2026.02.07)
 
 ### 0.2. Environment Support (For Automatic Patcher)
 

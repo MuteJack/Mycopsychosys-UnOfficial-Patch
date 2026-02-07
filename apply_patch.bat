@@ -12,7 +12,7 @@ set "GAME_ROOT=%SCRIPT_DIR%..\\"
 
 set "GIT_DIR=%SCRIPT_DIR%PortableGit"
 set "GIT_EXE=%GIT_DIR%\cmd\git.exe"
-set "DAT_FILE=%SCRIPT_DIR%unofficial_patch_20260204.dat"
+set "DAT_FILE=%SCRIPT_DIR%unofficial_patch_20260207.dat"
 set "TEMP_PATCH=%TEMP%\~unofficial_patch.tmp"
 
 echo ============================================
@@ -29,17 +29,20 @@ set "FOUND_EXE="
 for %%F in ("!GIT_DIR!\PortableGit-*.7z.exe") do set "FOUND_EXE=%%F"
 if not defined FOUND_EXE (
     echo [ERROR] PortableGit folder does not contain git or a PortableGit installer.
+    echo         Download the portable version of Git from the website, and paste to 'Patcher/PortableGit' folder.
+    echo         You can download "Git for Windows/x64 Portable." from https://git-scm.com/install/windows
     pause
     exit /b 1
 )
 echo [0] Extracting PortableGit...
+echo PortableGit File: !FOUND_EXE!
 "!FOUND_EXE!" -o"!GIT_DIR!" -y
 if not exist "!GIT_EXE!" (
     echo [ERROR] Failed to extract PortableGit.
     pause
     exit /b 1
 )
-echo [0] PortableGit extracted.
+echo [OK] Extracting PortableGit has been completed.
 echo.
 
 :skip_extract
@@ -53,8 +56,11 @@ if not exist "!DAT_FILE!" (
 
 :: Check game folder in parent directory
 if not exist "!GAME_ROOT!game" (
-    echo [ERROR] game folder not found in parent directory.
+    echo [ERROR] 'game' folder not found in parent directory.
     echo         Please place the Patcher folder inside the game's root directory.
+    echo         Example:
+    echo         C:\Program Files ^(x86^)\Steam\steamapps\common\Mycopsychosys Remastered
+    echo         D:\SteamLibrary\steamapps\common\Mycopsychosys Remastered
     pause
     exit /b 1
 )
@@ -80,8 +86,8 @@ del "!TEMP_PATCH!" 2>nul
 
 if "!APPLY_EXIT!" neq "0" (
     echo.
-    echo [ERROR] Patch failed to apply.
-    echo         The game files may have already been patched or are a different version.
+    echo [ERROR] Failed to apply patch.
+    echo         The game files may be a different version, or the patch has already been applied.
     pause
     exit /b 1
 )
