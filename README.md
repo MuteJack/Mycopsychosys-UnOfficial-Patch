@@ -1,10 +1,10 @@
 # Mycopsychosys Remastered - Unofficial Translation/Function Patch
 
-Unofficial feature patch for Game 'Mycopsychosys: Remastered'. (+Korean Translation)
+Unofficial feature patch for Game 'Mycopsychosys: Remastered'. (+Korean Translation)  
 'Mycopsychosys: Remastered' 게임의 비공식 기능 및 한국어 번역 패치입니다.
 
-For further instructions, please check 'README_eng.md' that linked below.
-자세한 내용은 아래의 README Files 섹션의 언어별 README 파일을 참고해주세요. (README_kor.md)
+For further instructions, please check 'README_eng.md' that linked below. (Including "How to Install")  
+설치방법 등 자세한 내용은 아래의 README Files 섹션의 언어별 README 파일을 참고해주세요. (README_kor.md 파일)
 
 Original Game: [DeltaCatStudio](https://www.deltacatstudio.com/)
 
