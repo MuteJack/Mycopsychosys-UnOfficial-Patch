@@ -8,12 +8,13 @@ setlocal EnableDelayedExpansion
 :: ============================================
 
 set "SCRIPT_DIR=%~dp0"
-set "GAME_ROOT=%SCRIPT_DIR%..\\"
+set "GAME_ROOT=!SCRIPT_DIR!..\"
 
-set "GIT_DIR=%SCRIPT_DIR%PortableGit"
-set "GIT_EXE=%GIT_DIR%\cmd\git.exe"
-set "DAT_FILE=%SCRIPT_DIR%unofficial_patch_20260207.dat"
-set "TEMP_PATCH=%TEMP%\~unofficial_patch.tmp"
+set "GIT_DIR=!SCRIPT_DIR!PortableGit"
+set "GIT_EXE=!GIT_DIR!\cmd\git.exe"
+set "TARGET_DIR=game"
+set "DAT_FILE=!SCRIPT_DIR!unofficial_patch_20260208.dat"
+set "TEMP_PATCH=!TEMP!\~unofficial_patch.tmp"
 
 echo ============================================
 echo  Mycopsychosys Remastered - Patch Applier
@@ -27,14 +28,26 @@ if exist "!GIT_EXE!" goto :skip_extract
 
 set "FOUND_EXE="
 for %%F in ("!GIT_DIR!\PortableGit-*.7z.exe") do set "FOUND_EXE=%%F"
+
+:: Download PortableGit if installer not found
 if not defined FOUND_EXE (
-    echo [ERROR] PortableGit folder does not contain git or a PortableGit installer.
-    echo         Download the portable version of Git from the website, and paste to 'Patcher/PortableGit' folder.
-    echo         You can download "Git for Windows/x64 Portable." from https://git-scm.com/install/windows
-    pause
-    exit /b 1
+    echo [0/2] Downloading PortableGit...
+    if not exist "!GIT_DIR!" mkdir "!GIT_DIR!"
+    powershell -Command "$release = Invoke-RestMethod -Uri 'https://api.github.com/repos/git-for-windows/git/releases/latest'; $asset = $release.assets | Where-Object { $_.name -match 'PortableGit-.*-64-bit\.7z\.exe$' } | Select-Object -First 1; if (-not $asset) { exit 1 }; $url = $asset.browser_download_url; $name = $asset.name; Write-Host \"  Downloading: $name\"; Invoke-WebRequest -Uri $url -OutFile '!GIT_DIR!\portablegit_download.7z.exe' -UseBasicParsing"
+    if errorlevel 1 (
+        echo [ERROR] Failed to download PortableGit.
+        echo         You can manually download "Git for Windows/x64 Portable." from https://git-scm.com/install/windows
+        echo         and place it in the 'PortableGit' folder.
+        pause
+        exit /b 1
+    )
+    set "FOUND_EXE=!GIT_DIR!\portablegit_download.7z.exe"
+    echo [OK] Download completed.
+    echo.
 )
-echo [0] Extracting PortableGit...
+
+:: Extract PortableGit
+echo [1/2] Extracting PortableGit...
 echo PortableGit File: !FOUND_EXE!
 "!FOUND_EXE!" -o"!GIT_DIR!" -y
 if not exist "!GIT_EXE!" (
@@ -55,8 +68,8 @@ if not exist "!DAT_FILE!" (
 )
 
 :: Check game folder in parent directory
-if not exist "!GAME_ROOT!game" (
-    echo [ERROR] 'game' folder not found in parent directory.
+if not exist "!GAME_ROOT!!TARGET_DIR!" (
+    echo [ERROR] '!TARGET_DIR!' folder not found in parent directory.
     echo         Please place the Patcher folder inside the game's root directory.
     echo         Example:
     echo         C:\Program Files ^(x86^)\Steam\steamapps\common\Mycopsychosys Remastered
